@@ -1,2 +1,10 @@
 # rock_paper_scissors
 A classic rock, paper, scissors game where you play against the computer
+🕹️ How to PlayPrerequisitesYou need to have Python 3 installed on your system.Running the GameSave the Code: Ensure your Python game code is saved as a .py file (e.g., rps_game.py).Open Terminal/Command Prompt: Navigate to the directory where you saved the file.Run the script: Execute the following command:Bashpython rps_game.py
+Game Instructions: When prompted, enter your choice: rock, paper, or scissors.The computer will make its random choice.The winner of the round will be announced, and the current score will be displayed. After each round, you will be asked if you want to Play again?Type yes or y to continue.Type no or n (or anything else) to quit.✨ FeaturesContinuous Play: Users can play multiple rounds until they choose to quit.Case-Insensitive Input: The game accepts inputs like "ROCK," "Paper," or "scissors."
+Score Tracking: The score is tracked across rounds for both the User and the Computer.Clear Feedback: Clear messages announce the winner of each round and the current tally.💻 Code Structure & LogicCore VariablesVariableScopePurposeuser_scoreGlobalTracks the total points for the user.computer_scoreGlobalTracks the total points for the computer.optionsGlobalA list of valid moves: ["rock", "paper", "scissors"].pick_winner FunctionThe central logic is encapsulated in the pick_winner function:Pythondef pick_winner(user_choice, computer_choice):
+    # ... logic ...
+    return (user_score_change, computer_score_change)
+It compares the user's and computer's choices.It returns a tuple (user_change, computer_change) with the point changes for that round (e.g., (1, 0) for a user win, (0, 0) for a draw).Game LoopThe game runs inside a while game_on: loop. The loop uses tuple unpacking to capture the returned scores from pick_winner and update the persistent user_score and computer_score variables.
+👤 Author[Clark Harkin / charkin33] 
+Initial development📜 LicenseThis project is open source and available under the [MIT License / Unlicensed / etc.].
